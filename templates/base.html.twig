@@ -33,7 +33,7 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Mes Boîtes De Jeux</a>
+        <a class="navbar-brand" href="#">Jaquette à l'envers</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -52,7 +52,7 @@
 </header>
 
 <main role="main">
-
+    {% if block('carousel') is defined %}
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -101,12 +101,16 @@
         </a>
     </div>
 
+    {% endif %}
+
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing">
+    <div class="container marketing  {% if block('carousel') is not defined %}mt-5{% endif %}">
+
+    
 
         {% block content %}
         {% endblock %}
