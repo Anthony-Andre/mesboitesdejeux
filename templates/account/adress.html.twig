@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes Adresses - MyGameBox{% endblock %}
+
+{% block content %}
+
+    <a href="" class="btn btn-info btn-sm float-right">Ajouter une adresse</a>
+
+    <h1> Mes Adresses </h1>
+
+    {{ app.user.firstname }}, c'est dans cet espace que vous pouvez gérer toutes vos adresses. <br>
+    <a href="{{path('account')}}">Retour</a>
+    <hr>
+
+
+
+
+{% endblock %}
