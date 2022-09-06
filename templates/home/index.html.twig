@@ -6,60 +6,67 @@
 
 {% block content %}
 
-<!-- Three columns of text below the carousel -->
+	<!-- Three columns of text below the carousel -->
 
-<h3 class="align-middle">Nos produits phares :</h3>
-<p>Découvrez nos articles les plus vendus</p>
-        <div class="row">
-           {% for product in products %}
-           <div class="col-md-3">
-           {% include 'product/single_product.html.twig' %}
-           </div>
-           {% endfor %}
-        </div><!-- /.row -->
+	<h3 class="align-middle">Nos produits phares :</h3>
+	<p>Découvrez nos articles les plus vendus</p>
+	<div class="row">
+		{% for product in products %}
+			<div class="col-md-3">
+				{% include 'product/single_product.html.twig' %}
+			</div>
+		{% endfor %}
+	</div>
+	<!-- /.row -->
 
 
-        <!-- START THE FEATURETTES -->
+	<!-- START THE FEATURETTES -->
 
-        <hr class="featurette-divider">
+	<hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Vous prendrez bien une cartouche? <span class="text-muted">(On parle de vos jeux vidéos)</span></h2>
-                <p class="lead">Ne les laissez plus sans protection ! Ayez le réflexe de les protéger afin de les conserver le plus longtemps possible !</p>
-            </div>
-            <div class="col-md-5">
-                <img src="{{asset('assets/img/cartouches.jpg')}}" alt="photo cartouches jeux" class="img-fluid">
-            </div>
-        </div>
+	<div class="row featurette">
+		<div class="col-md-7">
+			<h2 class="featurette-heading">Vous prendrez bien une cartouche?
+				<span class="text-muted">(On parle de vos jeux vidéos)</span>
+			</h2>
+			<p class="lead">Ne les laissez plus sans protection ! Ayez le réflexe de les protéger afin de les conserver le plus longtemps possible !</p>
+		</div>
+		<div class="col-md-5">
+			<img id="photoMain" src="{{asset('assets/img/cartouches.jpg')}}" alt="photo cartouches jeux" class="img-fluid">
+		</div>
+	</div>
 
-        <hr class="featurette-divider">
+	<hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Une petite cartouche? <span class="text-muted">(On parle toujours de vos jeux vidéos)</span></h2>
-                <p class="lead">Il faut toujours veiller sur les plus petits, c'est pour cela que nous vous proposons également des boites de remplacement officielles pour vos cartouches de consoles portables !</p>
-            </div>
-            <div class="col-md-5 order-md-1">
-        <img src="{{asset('assets/img/Gameboy.jpg')}}" alt="photo cartouches n64" class="img-fluid">
-            </div>
-        </div>
+	<div class="row featurette">
+		<div class="col-md-7 order-md-2">
+			<h2 class="featurette-heading">Une petite cartouche?
+				<span class="text-muted">(On parle toujours de vos jeux vidéos)</span>
+			</h2>
+			<p class="lead">Il faut toujours veiller sur les plus petits, c'est pour cela que nous vous proposons également des boites de remplacement officielles pour vos cartouches de consoles portables !</p>
+		</div>
+		<div class="col-md-5 order-md-1">
+			<img src="{{asset('assets/img/Gameboy.jpg')}}" alt="photo cartouches n64" class="img-fluid">
+		</div>
+	</div>
 
-        <hr class="featurette-divider">
+	<hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Nouvelle génération?<span class="text-muted">On est là aussi pour vous.</span></h2>
-                <p class="lead">Nous proposons également un grand nombre de boites officielles pour cd, peu importe la génération de votre console.</p>
-            </div>
-            <div class="col-md-5">
-                <img src="{{asset('assets/img/manette ps4.jpg')}}" alt="photo cartouches n64" class="img-fluid">
-            </div>
-        </div>
+	<div class="row featurette">
+		<div class="col-md-7">
+			<h2 class="featurette-heading">Nouvelle génération?<span class="text-muted">On est là aussi pour vous.</span>
+			</h2>
+			<p class="lead">Nous proposons également un grand nombre de boites officielles pour cd, peu importe la génération de votre console.</p>
+		</div>
+		<div class="col-md-5">
+			<img src="{{asset('assets/img/manette ps4.jpg')}}" alt="photo cartouches n64" class="img-fluid">
+		</div>
+	</div>
 
-        <hr class="featurette-divider">
+	<hr
+	class="featurette-divider">
 
-        <!-- /END THE FEATURETTES -->
+<!-- /END THE FEATURETTES -->
 
 
 {% endblock %}
